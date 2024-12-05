@@ -58,6 +58,25 @@ Developed by:HARINI S
 
 RegisterNumber:24900110
 
+module encod_data(d, x, y, z);
+
+ input [7:0] d;
+ 
+ output x;
+ 
+ output y;
+ 
+ output z;
+ 
+assign#3 x=d[4]|d[5]|d[6]|d[7];
+
+assign#3 y=d[2]|d[3]|d[6]|d[7];
+
+assign#3 z=d[1]|d[3]|d[5]|d[7];
+
+endmodule
+
+
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
 ![Screenshot (88)](https://github.com/user-attachments/assets/98de9fc4-cedb-4e48-967c-4632a7dca6fe)
 
